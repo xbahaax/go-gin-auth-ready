@@ -5,7 +5,8 @@ A lightweight, ready-to-use authentication backend built with Go, Gin, JWT, and 
 ## Features
 
 - 🔐 JWT-based authentication
-- 📝 User registration and login
+- � Bcrypt password hashing for secure password storage
+- �📝 User registration and login
 - 🛡️ Authentication middleware for protected routes
 - 🗃️ SQLite database (easily switchable to PostgreSQL, MySQL, etc.)
 - 🚀 Ready-to-run backend server
@@ -158,7 +159,8 @@ curl -X GET http://localhost:8080/protected \
 
 - JWT tokens with 24-hour expiration
 - Bearer token authentication
-- Password storage (Note: Consider adding password hashing for production)
+- Bcrypt password hashing with cost factor 14
+- Secure password verification
 - CORS-ready structure
 
 ## Contributing
@@ -175,10 +177,11 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Future Enhancements
 
-- [ ] Password hashing with bcrypt
 - [ ] Refresh token support
 - [ ] Rate limiting
 - [ ] Email verification
 - [ ] Password reset functionality
 - [ ] User roles and permissions
 - [ ] Database migrations
+- [ ] Input validation and sanitization
+- [ ] Session management
